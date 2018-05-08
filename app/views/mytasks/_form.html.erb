@@ -1,0 +1,52 @@
+<%= form_with(model: mytask, local: true) do |form| %>
+  <% if mytask.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mytask.errors.count, "error") %> prohibited this mytask from being saved:</h2>
+
+      <ul>
+      <% mytask.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :mytask_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :mytask_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :due %>
+    <%= form.text_field :due, id: :mytask_due %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hours %>
+    <%= form.text_field :hours, id: :mytask_hours %>
+  </div>
+
+  <div class="field">
+    <%= form.label :percent %>
+    <%= form.text_field :percent, id: :mytask_percent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :mytask_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other %>
+    <%= form.text_field :other, id: :mytask_other %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

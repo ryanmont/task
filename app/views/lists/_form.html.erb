@@ -1,0 +1,55 @@
+<%= form_with(model: list, local: true) do |form| %>
+  <% if list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+      <% list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="form-group">
+
+    <%= form.label :list_type %>
+    <%= form.collection_select(:list_type_id, ListType.all, :id, :category,
+                              {
+                                selected: list.list_types_id,
+                                include_blank: true,
+                              }
+    ) %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_area :title, id: :list_title, cols: 50, rows: 1, class: 'myclass' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :list_description, cols: 50, rows: 8, class: 'myclass' %>
+  </div>
+  <br>
+  <br>
+
+  <div>
+      <%#= form.fields_for :list_items do |items_form| %>
+      <%#= render 'list_item_fields', f: items_form %>
+   </div>
+<%# end %>
+
+<!-- <button type="button" class="btn btn-primary">
+  <%#= link_to_add_association "Add Another Item to List", form, :list_items, :class => "btn" %>
+</button> -->
+<br>
+<br>
+<br>
+  <button type="button" class= 'btn btn-success'>
+   <%= form.submit  "Click to Create Your List" , :class =>'btn btn-success'%>
+  </button>
+<% end %>
+<br>

@@ -1,0 +1,40 @@
+<h1>Your Very Own List Categories</h1>
+
+
+<h1>Your Lists</h1>
+
+<h3> The World is Yours - Keep you lists organized and seperated by Category</h3>
+<br>
+
+  <ol>
+    <ul> First things first,  click below to create the categories that fit your life</ul>
+    <ul>For example a list for groceries, movies, clothing, camping, travel, school, gym workout, anything, etc </ul>
+    <ul> Next Click on Create List and assign the list to one of the categories you just created</ul>
+  </ol>
+<br>
+We want to operate on this page to display all of the categories - then they will go into the lists for that category.  No need to have a seperate page that shows the lists its too many steps and confusing.  I need to delete the path for the lists index page.  They should all just be shown in the through categories.  Possibly create a second dashboard that will display all of this information and this page could serve as just the edit category page strictly for editing and deleting categories.
+
+Also  we need to add the actual items on the list using coccoon to add each list item.  Also,  the seperate list categories will be buttons or icons with words or some sort so it's easy to use on the phone.  I think bootstrap buttons with high border radius number.  into 3 columns in the mobile and 6 columsn on desktop.
+<hr>
+<br>
+<div class= 'row'>
+    <% @list_types.each do |list_type| %>
+
+  <div class = 'col-md-2'>
+    <div class = "div5">
+    
+      <%= link_to 'Lists in Category', list_type %> &nbsp; |
+      <%= link_to 'Edit Category', edit_list_type_path(list_type) %>&nbsp; |
+      <%= link_to 'Delete Category', list_type, method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= list_type.category %>
+    
+ </div>
+     
+</div>
+    <% end %>
+</div>
+<br>
+<br>
+<br>
+
+<%= link_to 'Add a new Category', new_list_type_path %>

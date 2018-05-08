@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @team.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @team.description %>
+</p>
+
+<p>
+  <strong>Due:</strong>
+  <%= @team.due %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @team.hours %>
+</p>
+
+<p>
+  <strong>Percent:</strong>
+  <%= @team.percent %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @team.image %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @team.other %>
+</p>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

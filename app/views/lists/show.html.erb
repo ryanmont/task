@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>
+    List type:
+  <%= @list&.list_type&.category %>
+  </strong>
+</p>
+<hr>
+<br>
+
+<p>
+  Title:
+  <%= @list.title %>
+</p>
+
+<p>
+  Description:
+  <%= @list.description %>
+</p>
+
+<p>
+  Items on List:
+<div class ="items">
+
+    <% @list.list_items.each do |i| %>&nbsp;&nbsp;
+    <%= check_box_tag 'check'%>&nbsp;&nbsp;
+    <%= i.name %><br>
+    <% end %>
+</div>
+</p>
+<br>
+<br>
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mytask.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mytask.description %>
+</p>
+
+<p>
+  <strong>Due:</strong>
+  <%= @mytask.due %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @mytask.hours %>
+</p>
+
+<p>
+  <strong>Percent:</strong>
+  <%= @mytask.percent %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @mytask.image %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @mytask.other %>
+</p>
+
+<%= link_to 'Edit', edit_mytask_path(@mytask) %> |
+<%= link_to 'Back', mytasks_path %>

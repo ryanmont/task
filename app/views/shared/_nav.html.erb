@@ -8,7 +8,16 @@
       <%= link_to 'My Lists', list_types_path%> &nbsp;&nbsp;&nbsp;&nbsp;
       
       <%= link_to 'Team Tasks',  teams_path%> &nbsp;&nbsp;&nbsp;&nbsp;
-      <%= link_to 'Chores',  chores_path%> &nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to 'Chores',  chores_path%> &nbsp;&nbsp;&nbsp; |   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <ul class ="nav navbar-nav">
+        
+        <% if current_user.present? %>
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      <% else %>
+      <%= link_to "Log In", new_user_session_path %>  |  <%= link_to 'Sign Up', new_user_registration_path %>
+      <%end%>
+    </ul>
   </div>
 </center>
   <br>

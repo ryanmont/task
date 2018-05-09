@@ -18,7 +18,7 @@
     <%= form.label :list_type %>
     <%= form.collection_select(:list_type_id, ListType.all, :id, :category,
                               {
-                                selected: list.list_types_id,
+                                selected: list.list_type_id,
                                 include_blank: true,
                               }
     ) %>
@@ -48,8 +48,8 @@
 <br>
 <br>
 <br>
-  <button type="button" class= 'btn btn-success'>
+  <!-- <button type="button" class= 'btn btn-success'> -->
    <%= form.submit  "Click to Create Your List" , :class =>'btn btn-success'%>
-  </button>
+<!--   </button> -->
 <% end %>
 <br>

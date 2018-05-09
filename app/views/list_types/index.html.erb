@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+<div class= 'container'>
 <h1>Your Very Own List Categories</h1>
 
 
@@ -16,25 +18,54 @@ We want to operate on this page to display all of the categories - then they wil
 
 Also  we need to add the actual items on the list using coccoon to add each list item.  Also,  the seperate list categories will be buttons or icons with words or some sort so it's easy to use on the phone.  I think bootstrap buttons with high border radius number.  into 3 columns in the mobile and 6 columsn on desktop.
 <hr>
+
+<%= link_to  new_list_type_path do %> 
+
+&nbsp;&nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;Create a New Category
+<%end%> 
+
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+
+<%= link_to  new_list_path do %> 
+ 
+&nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;Create A New List
+<%end%> 
+
+
+<hr>
 <br>
+
 <div class= 'row'>
     <% @list_types.each do |list_type| %>
 
-  <div class = 'col-md-2'>
-    <div class = "div5">
-    
-      <%= link_to 'Lists in Category', list_type %> &nbsp; |
-      <%= link_to 'Edit Category', edit_list_type_path(list_type) %>&nbsp; |
-      <%= link_to 'Delete Category', list_type, method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp;&nbsp;&nbsp;&nbsp;
-      <%= list_type.category %>
-    
- </div>
-     
-</div>
+      <div class= 'col-sm-6 col-md-4 col-lg-2 centered'>
+        
+
+        <%= link_to list_type do %>
+          <div class = "div5">
+            <%= list_type.category.titleize %>
+      
+            <hr>
+
+            <%= link_to  edit_list_type_path(list_type) do %> 
+            <%= fa_icon 'fab edit fa-7x'%>&nbsp; 
+            <%end%>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;&nbsp;&nbsp;    
+
+            <%= link_to  list_type, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <%= fa_icon 'trash'%>&nbsp;  
+            <%end%>
+
+          </div>
+   
+      </div>
+        <% end %>
+
     <% end %>
 </div>
 <br>
 <br>
-<br>
-
-<%= link_to 'Add a new Category', new_list_type_path %>
+</div>

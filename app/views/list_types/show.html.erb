@@ -1,9 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @list_type.category %>
-</p>
 
-<%= link_to 'Edit', edit_list_type_path(@list_type) %> |
-<%= link_to 'Back', list_types_path %>
+  <center><h3> <%= @list_type.category %></h3></center>
+
+<br>
+
+<% @lists.each do |l| %>
+<div class="div6">
+<%= l.title %><br>
+<%= l.description %>
+<br>
+<br>
+<%= link_to 'View List', l %>
+<br>
+</div>
+<br>
+<%end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to 'Back to All lists', list_types_path %><br>

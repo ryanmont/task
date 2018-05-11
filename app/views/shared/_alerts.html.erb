@@ -1,0 +1,9 @@
+<!-- Gritter Javascript Alerts ERROR NOTICES -->
+
+<% if flash[:alert] %>
+  <%= js add_gritter(flash[:alert], :image=> :success, title: "FRIENDLY TASK", sticky: false, time: 3500) %>
+<% elsif flash[:error] %>
+  <%= js add_gritter(flash[:error], :image=> :error, title: "FRIENDLY TASK", sticky: false, time: 3500) %>
+<% else %>
+  <%= js add_gritter(flash[:notice],:image=> :success,  title: "FRIENDLY TASK", sticky: false, time: 3500) %>
+<% end %>

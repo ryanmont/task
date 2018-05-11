@@ -1,39 +1,47 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Teams</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Due</th>
-      <th>Hours</th>
-      <th>Percent</th>
-      <th>Image</th>
-      <th>Other</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @teams.each do |team| %>
-      <tr>
-        <td><%= team.title %></td>
-        <td><%= team.description %></td>
-        <td><%= team.due %></td>
-        <td><%= team.hours %></td>
-        <td><%= team.percent %></td>
-        <td><%= team.image %></td>
-        <td><%= team.other %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h1>Team Projects</h1>
 <br>
 
-<%= link_to 'New Team', new_team_path %>
+<hr>
+
+<%= link_to  new_team_path do %>
+&nbsp;&nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;New Team Project
+<%end%> 
+<hr>
+<br>
+<div class= 'row'>
+    <% @teams.each do |team| %>
+      <div class= 'col-sm-6 col-md-4 col-lg-3 centered'>
+          
+          <%= link_to team do %>
+            <div class ='div6'>
+              <%= team.title.titleize %><br>
+          <%end%>
+              <%= team.description %>
+              <br>
+              <hr>
+        <!--         <td><%#= team.due %>
+                <%#= team.hours %>
+                <%#= team.percent %>
+                <%#= team.image %>
+                <%#= team.other %> -->
+
+              <%= link_to  edit_team_path(team) do %>
+              <%= fa_icon 'fab edit fa-7x'%>&nbsp; 
+              <%end%>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;&nbsp;&nbsp; 
+
+              <%= link_to  team, method: :delete, data: { confirm: 'Are you sure?' }  do %>
+              <%= fa_icon 'trash'%>&nbsp;  
+              <%end%>
+
+            </div>
+      </div>
+    <% end %>
+</div>
+
+
+
+

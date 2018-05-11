@@ -30,7 +30,7 @@ class ListTypesController < ApplicationController
 
     respond_to do |format|
       if @list_type.save
-        format.html { redirect_to @list_type, notice: 'List type was successfully created.' }
+        format.html { redirect_to @list_type, notice: 'List Category successfully created.' }
         format.json { render :show, status: :created, location: @list_type }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class ListTypesController < ApplicationController
   def update
     respond_to do |format|
       if @list_type.update(list_type_params)
-        format.html { redirect_to @list_type, notice: 'List type was successfully updated.' }
+        format.html { redirect_to @list_type, notice: 'List Category successfully updated.' }
         format.json { render :show, status: :ok, location: @list_type }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class ListTypesController < ApplicationController
   def destroy
     @list_type.destroy
     respond_to do |format|
-      format.html { redirect_to list_types_url, notice: 'List type was successfully destroyed.' }
+      format.html { redirect_to list_types_url, notice: 'List Category successfully destroyed.' }
       format.json { head :no_content }
     end
   end

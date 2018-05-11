@@ -1,22 +1,20 @@
 <p id="notice"><%= notice %></p>
 <div class= 'container'>
-<h1>Your Very Own List Categories</h1>
 
+<center><h3>Your Lists</h3>
 
-<h1>Your Lists</h1>
-
-<h3> The World is Yours - Keep you lists organized and seperated by Category</h3>
+<h5> Keep you lists organized by Category</h5>
+</center>
 <br>
 
-  <ol>
-    <ul> First things first,  click below to create the categories that fit your life</ul>
-    <ul>For example a list for groceries, movies, clothing, camping, travel, school, gym workout, anything, etc </ul>
-    <ul> Next Click on Create List and assign the list to one of the categories you just created</ul>
-  </ol>
+ 
+    <ol> Easy as 1..2..3</ol>
+    <ol> First,  click "Create a New Category" to create the categories that fit your life(ie; groceries, school, packing, home projects, etc</ol>
+    <ol>Second,  Click on "Create a New List" and place that list to one of the customs categories you just created</ol>
+    <ol> Third, just repeat the process for each new list</ol>
+ <br>
 <br>
-We want to operate on this page to display all of the categories - then they will go into the lists for that category.  No need to have a seperate page that shows the lists its too many steps and confusing.  I need to delete the path for the lists index page.  They should all just be shown in the through categories.  Possibly create a second dashboard that will display all of this information and this page could serve as just the edit category page strictly for editing and deleting categories.
 
-Also  we need to add the actual items on the list using coccoon to add each list item.  Also,  the seperate list categories will be buttons or icons with words or some sort so it's easy to use on the phone.  I think bootstrap buttons with high border radius number.  into 3 columns in the mobile and 6 columsn on desktop.
 <hr>
 
 <%= link_to  new_list_type_path do %> 
@@ -33,7 +31,6 @@ Also  we need to add the actual items on the list using coccoon to add each list
 &nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;Create A New List
 <%end%> 
 
-
 <hr>
 <br>
 
@@ -42,7 +39,6 @@ Also  we need to add the actual items on the list using coccoon to add each list
 
       <div class= 'col-sm-6 col-md-4 col-lg-2 centered'>
         
-
         <%= link_to list_type do %>
           <div class = "div5">
             <%= list_type.category.titleize %>

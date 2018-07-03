@@ -3,6 +3,7 @@
 
   <center><h3> <%= @list_type.category.upcase %></h3></center>
 
+<%= link_to 'Back to All lists', list_types_path %><br>
 <br>
 
 <% @lists.each do |l| %>
@@ -11,14 +12,15 @@
 <%= l.description %>
 <br>
 <br>
-<%= link_to 'View List', l %>
-<br>
+<%= link_to 'View List', l %> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
+<%= link_to l, method: :delete, data: { confirm: 'Are you sure?' }  do %>
+              <%= fa_icon 'trash'%>&nbsp;  
+              <%end%> 
+
 </div>
 <br>
+<br>
+
+
+
 <%end %>
-<br>
-<br>
-<br>
-<br>
-<br>
-<%= link_to 'Back to All lists', list_types_path %><br>

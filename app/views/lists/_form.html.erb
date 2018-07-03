@@ -37,19 +37,19 @@
   <br>
 
   <div>
-      <%#= form.fields_for :list_items do |items_form| %>
-      <%#= render 'list_item_fields', f: items_form %>
+<%= form.fields_for :list_items do |items_form| %>
+      <%= render 'list_item_fields', f: items_form %>
    </div>
-<%# end %>
+<% end %> 
 
-<!-- <button type="button" class="btn btn-primary">
-  <%#= link_to_add_association "Add Another Item to List", form, :list_items, :class => "btn" %>
-</button> -->
+<button type="button" class="btn btn-primary">
+  <%= link_to_add_association "Add Another Item to List", form, :list_items, :class => "btn" %>
+</button> 
 <br>
 <br>
 <br>
-  <!-- <button type="button" class= 'btn btn-success'> -->
+   <button type="button" class= 'btn btn-success'> -->
    <%= form.submit  "Click to Create Your List" , :class =>'btn btn-success'%>
-<!--   </button> -->
+   </button>
 <% end %>
 <br>

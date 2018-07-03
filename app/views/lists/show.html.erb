@@ -16,19 +16,27 @@
 </div>
 <br>
 
-<p>
-  Items on List:
+
+  <p> Items on List: </p>
+  <br>
 <div class ="items">
 
-<!--     <%# @list.list_items.each do |i| %>&nbsp;&nbsp;
-    <%#= check_box_tag 'check'%>&nbsp;&nbsp;
-    <%#= i.name %><br>
-    <%# end %> -->
+<% @list.list_items.each do |i| %>&nbsp;&nbsp;
+   
+    <%= i.item %><br>
+    <% end %>
 </div>
-</p>
+
 <br>
 <br>
-<%= link_to 'Edit List', edit_list_path(@list) %>
+<%= link_to  edit_list_path(@list) do %>
+            <%= fa_icon 'fab edit fa-7x'%>&nbsp; Edit item on List
+            <%end%>
 <br>
 <br>
-<%= link_to 'Back to All lists', list_types_path %><br>
+<%= link_to list_types_path do %>
+ <%= fa_icon 'caret-left'%>&nbsp; Back to All lists
+ &nbsp;
+ <%= fa_icon 'list'%>
+<%end%>
+

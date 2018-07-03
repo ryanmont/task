@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+
+<% if current_user.present?%>
+
 <h1>Your Lists</h1>
 
 This page should be gone-  I want all lists stricly under the categories page-  the nav bar link should also be gone.
@@ -34,3 +37,6 @@ This page should be gone-  I want all lists stricly under the categories page-  
 <br>
 
 <%= link_to 'Click to add a New List', new_list_path %>  
+
+
+<%end%>

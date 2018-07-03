@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<% if current_user.present?%>
+
 <p>
   <strong>
     List type:
@@ -40,3 +42,5 @@
  <%= fa_icon 'list'%>
 <%end%>
 
+
+<%end%>

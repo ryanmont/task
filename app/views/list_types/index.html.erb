@@ -11,9 +11,11 @@
     <ol> Easy as 1..2..3</ol>
     <ol> First,  click "Create a New Category" to create the categories that fit your life(ie; groceries, school, packing, home projects, etc</ol>
     <ol>Second,  Click on "Create a New List" and place that list to one of the customs categories you just created</ol>
-    <ol> Third, just repeat the process for each new list</ol>
+   
  <br>
 <br>
+
+<% if current_user.present?%>
 
 <hr>
 
@@ -65,3 +67,6 @@
 <br>
 <br>
 </div>
+
+
+<%end%>

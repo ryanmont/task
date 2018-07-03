@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<% if current_user.present?%>
 
   <center><h3> <%= @list_type.category.upcase %></h3></center>
 
@@ -24,3 +25,5 @@
 
 
 <%end %>
+
+<%end%>

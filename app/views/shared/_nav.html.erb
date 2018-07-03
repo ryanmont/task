@@ -17,12 +17,15 @@
                 
 
               <li class="nav-item">
+              <%= link_to 'About', pages_about_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+
+        <% if current_user.present?%>
+
+              <li class="nav-item">
               <%= link_to 'Settings', pages_settings_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </li>
 
-              <li class="nav-item">
-              <%= link_to 'About', pages_about_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </li>
 
               <li class="nav-item">
               <%#= link_to 'My Lists', lists_path%> <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -36,7 +39,10 @@
               <li class="nav-item">
               <%= link_to 'Chores',  chores_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; 
             </li>
-      
+            
+        <%end%>
+
+
         </ul>
 
         <ul class="navbar-nav ml-auto">

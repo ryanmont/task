@@ -2,25 +2,28 @@
 
 <% if current_user.present?%>
 
+
+<div class="form-top">
 <p>
   <strong>
-    List type:
+   Category:&nbsp;
   <%= @list&.list_type&.category %>
   </strong>
 </p>
 <hr>
 <br>
 
+<center>
 <div style="color:orange">
   <%= @list.title %>
   <br>
   <%= @list.description %>
 </div>
-<br>
+</center>
 
 
   <p> Items on List: </p>
-  <br>
+
 <div class ="items">
 
 <% @list.list_items.each do |i| %>&nbsp;&nbsp;
@@ -44,3 +47,5 @@
 
 
 <%end%>
+
+</div>

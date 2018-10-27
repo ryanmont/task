@@ -1,19 +1,18 @@
 <p id="notice"><%= notice %></p>
-<div class= 'container'>
 
-<center><h3>Your Lists</h3>
 
-<h5> Keep you lists organized by Category</h5>
-</center>
+<center><h4>Your Lists</h4>
+
+<div class="category_header"> Keep you lists organized by Category</div>
+
 <br>
 
- 
-    <ol> Easy as 1..2..3</ol>
-    <ol> First,  click "Create a New Category" to create the categories that fit your life(ie; groceries, school, packing, home projects, etc</ol>
-    <ol>Second,  Click on "Create a New List" and place that list to one of the customs categories you just created</ol>
+
+    <p> STEP 1: Click "Create a New Category" to create the categories that fit your life ie; groceries, school, packing, home projects, etc</p>
+    <p> STEP 2:  Click on "Create a New List" and organize that list into one of the customs categories you just created</p>
    
- <br>
-<br>
+
+
 
 <% if current_user.present?%>
 
@@ -32,14 +31,15 @@
  
 &nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;Create A New List
 <%end%> 
-
+</center>
 <hr>
 <br>
-
-<div class= 'row'>
+<div class="space-index">
+<div class="d-flex justify-content-around">
+<div class= 'row justify-content-center"'>
     <% @list_types.each do |list_type| %>
 
-      <div class= 'col-sm-6 col-md-4 col-lg-2 centered'>
+  
         
         <%= link_to list_type do %>
           <div class = "div5">
@@ -57,16 +57,17 @@
               <%= fa_icon 'trash'%>&nbsp;  
             <%end%>
 
-          </div>
+     
    
       </div>
         <% end %>
-
     <% end %>
 </div>
-<br>
-<br>
 </div>
+</center>
+<br>
+<br>
+
 
 
 <%end%>

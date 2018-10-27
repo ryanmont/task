@@ -6,20 +6,28 @@
 
 
 body {
-  background-color: #fff; 
-  margin: 33px;
+  background-color: rgb(171, 168, 168); 
+  margin: 5px;
   font-family: 'Roboto', helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 18px;
-  color:grey;
+  font-size: 12px;
+  color:white;
 }
 
 p,td {
   font-family: 'Roboto', helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 18px;
-  color: #124360;
+  font-size: 11px;
+  color:white;
+  padding:5px;
   
+}
+hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  color:white;
+  margin: 1em 0;
+  padding: 0; 
 }
 
 pre {
@@ -66,7 +74,7 @@ div {
 }
 
 #error_explanation {
-  width: 450px;
+  width: 300px;
   border: 2px solid red;
   padding: 7px 7px 0;
   margin-bottom: 20px;
@@ -78,7 +86,7 @@ div {
     text-align: center;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
-    text-shadow: 2px 2px 2px lightgrey;
+ 
     color: grey;
   }
 
@@ -100,22 +108,28 @@ label {
 .nav a:hover{
   color:lightgrey;
 }
+.space-index{
+  margin:15px;
+}
 
+.form-top{
+  margin:10px;
+}
   .div5 {
 
-    width: 150px;
+    width: 90px;
     height: auto;
     margin: 5px;
     border: 2px solid grey; 
     font-family: 'Roboto', helvetica, sans-serif;
-    padding:8px;
+    padding:5px;
     box-shadow: 2px 3px 8px #888888;
-    border-radius: 7px;
+    border-radius: 25px;
     text-align: center;
     vertical-align: middle;
     background: linear-gradient(#ff7133, #ffbe33);
     color:white;
-    font-size: 16px;
+    font-size: 12px;
     
 }
 
@@ -136,13 +150,13 @@ box-shadow: 2px 3px 8px orange;
 
 .div6 {
     display:  inline-block;
-    width: 280px;
+    width: 260px;
     height: auto;
     margin: 10px;
     border: 2px solid grey; 
     font-family: 'Roboto', helvetica, sans-serif;
-    font-size: 11pt;
-    padding:0.25em;
+    font-size: 9pt;
+    padding:5px;
     box-shadow: 1px 3px 8px #888888;
     border-radius: 7px;
     text-align: center;
@@ -151,6 +165,17 @@ box-shadow: 2px 3px 8px orange;
     color: orange;
   }
 
+
+  .category_header{
+    font-family: 'Roboto', helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size:14pt;
+ 
+    color: orange;
+
+  }
 
 .trashcan{
   color:#007AFE;
@@ -172,3 +197,9 @@ box-shadow: 2px 3px 8px orange;
   text-align: center
 }
 
+
+@media only screen and (max-width: 320px) {
+  body {
+      background-color: #2A2A2C;
+  }
+}

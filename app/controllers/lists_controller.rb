@@ -56,7 +56,7 @@ class ListsController < ApplicationController
   def destroy
     @list.destroy
     respond_to do |format|
-      format.html { redirect_to lists_url, notice: 'List was successfully deleted.' }
+      format.html { redirect_to list_types_url, notice: 'List was successfully deleted.' }
       format.json { head :no_content }
     end
   end

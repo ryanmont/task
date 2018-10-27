@@ -2,10 +2,31 @@
 
 <% if current_user.present?%>
 
-  <center><h3> <%= @list_type.category.upcase %></h3></center>
-
-<%= link_to 'Back to All lists', list_types_path %><br>
+  <center>
+  
+  <div class="category_header">
+   
+    <%= @list_type.category.upcase %>
+  
+  </div>
+  <%= link_to  new_list_path do %> 
+ 
+<%= fa_icon 'plus-square'%>&nbsp;Create A New List
+<%end%> 
 <br>
+
+
+<br>
+<%= link_to list_types_path do %>
+ <%= fa_icon 'caret-left'%>&nbsp; Back to All lists
+ &nbsp;
+ <%= fa_icon 'list'%>
+<%end%>
+
+<br>
+<br>
+<br>
+
 
 <% @lists.each do |l| %>
 <div class="div6">
@@ -19,7 +40,7 @@
               <%end%> 
 
 </div>
-<br>
+<br>  
 <br>
 
 
@@ -27,3 +48,5 @@
 <%end %>
 
 <%end%>
+
+</center>

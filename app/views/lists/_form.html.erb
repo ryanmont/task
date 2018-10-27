@@ -1,17 +1,13 @@
 <%= form_with(model: list, local: true) do |form| %>
   <% if list.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(list.errors.count, "error") %> prohibited this list from being saved:</h2>
 
-      <ul>
-      <% list.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% list.errors.full_messages.each do |error| %>
+     <%= js add_gritter(error, :image=> :error, title: "FRIENDLY TASK", sticky: false, time: 3500) %>
       <% end %>
-      </ul>
-    </div>
+
   <% end %>
 
-
+<div class="form-top">
 
   <div class="form-group">
 
@@ -24,17 +20,18 @@
     ) %>
   </div>
 
+
   <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_area :title, id: :list_title, cols: 50, rows: 1, class: 'myclass' %>
+    <%= form.text_area :title, id: :list_title, cols: 30, rows: 1, class: 'myclass' %>
   </div>
 
   <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :list_description, cols: 50, rows: 8, class: 'myclass' %>
+    <%= form.text_area :description, id: :list_description, cols: 30, rows: 2, class: 'myclass' %>
   </div>
-  <br>
-  <br>
+
+<hr>
 
   <div>
 <%= form.fields_for :list_items do |items_form| %>
@@ -42,14 +39,22 @@
    </div>
 <% end %> 
 
+<br>
+<center>
 <button type="button" class="btn btn-primary">
   <%= link_to_add_association "Add Another Item to List", form, :list_items, :class => "btn" %>
 </button> 
 <br>
 <br>
 <br>
-   <button type="button" class= 'btn btn-success'> -->
-   <%= form.submit  "Click to Create Your List" , :class =>'btn btn-success'%>
+
+   <button type="button" class= 'btn btn-success'> 
+   <%= form.submit  "Create/Update Your List" , :class =>'btn btn-success'%>
    </button>
 <% end %>
+
+</center>
 <br>
+<br>
+<br>
+<div>

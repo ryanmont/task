@@ -37,13 +37,13 @@
 <div class="space-index">
 <div class="d-flex justify-content-around">
 <div class= 'row justify-content-center"'>
+   
     <% @list_types.each do |list_type| %>
-
-  
-        
+ 
         <%= link_to list_type do %>
           <div class = "div5">
-            <%= list_type.category.titleize %>
+            <%= list_type.category.titleize %><br>
+            <%=list_type.lists.count%>
       
             <hr>
 

@@ -18,7 +18,7 @@ p,td {
   font-size: 11px;
   color:white;
   padding:5px;
-  
+   
 }
 hr{
   display: block;
@@ -113,7 +113,8 @@ label {
 }
 
 .form-top{
-  margin:10px;
+  margin-left:5px;
+  display:inline-block;
 }
   .div5 {
 
@@ -141,12 +142,11 @@ label {
   color:grey;
 }
 
-.div5:hover{
-box-shadow: 2px 3px 8px orange;
-
+.btn {
+    font-family: Roboto;
+    font-size: 8pt
 
 }
-
 
 .div6 {
     display:  inline-block;
@@ -184,6 +184,7 @@ box-shadow: 2px 3px 8px orange;
 
 .items{
     color:#007AFE;
+
 }
 
 .card-header{
@@ -197,8 +198,11 @@ box-shadow: 2px 3px 8px orange;
   text-align: center
 }
 
+.input{
+  color:pink;
+}
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 420px) {
   body {
       background-color: #2A2A2C;
   }

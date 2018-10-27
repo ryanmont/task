@@ -11,20 +11,20 @@
               <%= link_to 'Home', pages_home_path %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </li>
 
-            <li class="nav-item">
-              <%= link_to 'Your Dashboard', pages_dashboard_path %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </li>
+<!--             <li class="nav-item">
+              <%#= link_to 'Your Dashboard', pages_dashboard_path %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li> -->
                 
 
-              <li class="nav-item">
-              <%= link_to 'About', pages_about_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </li>
+<!--               <li class="nav-item">
+              <%#= link_to 'About', pages_about_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li> -->
 
         <% if current_user.present?%>
 
-              <li class="nav-item">
-              <%= link_to 'Settings', pages_settings_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </li>
+<!--               <li class="nav-item">
+              <%#= link_to 'Settings', pages_settings_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li> -->
 
 
               <li class="nav-item">
@@ -32,14 +32,14 @@
               <%= link_to 'My Lists', list_types_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </li>
 
-              <li class="nav-item">
-              <%= link_to 'Team Tasks',  teams_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--               <li class="nav-item">
+              <%#= link_to 'Team Tasks',  teams_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </li>
 
               <li class="nav-item">
-              <%= link_to 'Chores',  chores_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <%#= link_to 'Chores',  chores_path%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </li>
-            
+             -->
         <%end%>
 
 
@@ -51,7 +51,9 @@
                 <% if current_user.present? %>
                 <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
                 <% else %>
-                <%= link_to "Log In", new_user_session_path %>  |  <%= link_to 'Sign Up', new_user_registration_path %>
+                <%= link_to "Log In", new_user_session_path %>
+                <!--   |  
+                  <%#= link_to 'Sign Up', new_user_registration_path %> -->
                 <%end%>
             </li>
             &nbsp;&nbsp;&nbsp;&nbsp;

@@ -9,24 +9,28 @@
     <%= @list_type.category.upcase %>
   
   </div>
-  <%= link_to  new_list_path do %> 
- 
-<%= fa_icon 'plus-square'%>&nbsp;Create A New List
-<%end%> 
-<br>
 
+<hr>
 
-<br>
 <%= link_to list_types_path do %>
  <%= fa_icon 'caret-left'%>&nbsp; Back to All lists
  &nbsp;
  <%= fa_icon 'list'%>
+
 <%end%>
 
-<br>
-<br>
-<br>
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 
+<%= link_to  new_list_path do %> 
+ 
+&nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;Create A New List
+<%end%> 
+
+<hr>
+
+<br>
 
 <% @lists.each do |l| %>
 <div class="div6">

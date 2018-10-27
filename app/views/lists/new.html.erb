@@ -2,4 +2,14 @@
 
 <%= render 'form', list: @list %>
 
-<%= link_to 'Back', lists_path %>
+<hr>
+
+<div class="space-index">
+
+<%= link_to list_types_path do %>
+ <%= fa_icon 'caret-left'%>&nbsp; Back to All lists
+ &nbsp;
+ <%= fa_icon 'list'%>
+
+<%end%>
+</div>

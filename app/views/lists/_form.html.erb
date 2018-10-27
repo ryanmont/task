@@ -7,28 +7,42 @@
 
   <% end %>
 
-<div class="form-top">
+<hr>
+<div class ="form-top">
+
 
   <div class="form-group">
 
-    <%= form.label :list_type %>
+    <%= form.label :list_type, "Category" %>
     <%= form.collection_select(:list_type_id, ListType.all, :id, :category,
                               {
                                 selected: list.list_type_id,
                                 include_blank: true,
                               }
     ) %>
-  </div>
 
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+
+     <button type="button" class= 'btn btn-success'> 
+   <%= form.submit  "Create/Update List" , :class =>'btn btn-success'%>
+   </button>
+   
+  </div>
+</div>
+
+<hr>
+
+<center>
 
   <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_area :title, id: :list_title, cols: 30, rows: 1, class: 'myclass' %>
+    <%= form.text_area :title, id: :list_title, placeholder: "Title", cols: 45, rows: 1, class: 'myclass' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :list_description, cols: 30, rows: 2, class: 'myclass' %>
+ 
+    <%= form.text_area :description, id: :list_description, placeholder: "Type Description", cols: 45, rows: 2, class: 'myclass' %>
   </div>
 
 <hr>
@@ -39,22 +53,25 @@
    </div>
 <% end %> 
 
-<br>
-<center>
-<button type="button" class="btn btn-primary">
-  <%= link_to_add_association "Add Another Item to List", form, :list_items, :class => "btn" %>
-</button> 
-<br>
-<br>
-<br>
 
-   <button type="button" class= 'btn btn-success'> 
-   <%= form.submit  "Create/Update Your List" , :class =>'btn btn-success'%>
-   </button>
+
+<center>
+
+
+
+<button type="button" class="btn btn-primary">
+  &nbsp; <%= link_to_add_association "Add Items to List", form, :list_items, :class => "btn" %>&nbsp;
+</button> 
+
 <% end %>
+
+</center>
+
+
+
+
 
 </center>
 <br>
 <br>
-<br>
-<div>
+

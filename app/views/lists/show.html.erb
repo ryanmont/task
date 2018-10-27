@@ -11,39 +11,55 @@
   </strong>
 </p>
 <hr>
-<br>
 
-<center>
+
 <div style="color:orange">
-  <%= @list.title %>
+  Title:  <%= @list.title %>
   <br>
-  <%= @list.description %>
+
+
+  Description:  <%= @list.description %>
 </div>
-</center>
 
+<hr>
 
-  <p> Items on List: </p>
+  <p> Items on List:  <%= @list.list_items.count %> </p>
 
 <div class ="items">
 
-<% @list.list_items.each do |i| %>&nbsp;&nbsp;
+<% @list.list_items.each do |i| %>
    
-    <%= i.item %><br>
+
+   - <%= i.item %><br><br>
     <% end %>
 </div>
 
 <br>
 <br>
-<%= link_to  edit_list_path(@list) do %>
-            <%= fa_icon 'fab edit fa-7x'%>&nbsp; Edit item on List
-            <%end%>
-<br>
-<br>
+
+<center>
+
+<hr>
 <%= link_to list_types_path do %>
  <%= fa_icon 'caret-left'%>&nbsp; Back to All lists
  &nbsp;
  <%= fa_icon 'list'%>
 <%end%>
+
+
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+
+<%= link_to  edit_list_path(@list) do %>
+  <%= fa_icon 'fab edit fa-7x'%>&nbsp; Edit item on List
+    <%end%>
+<hr>
+
+</center>
+
+
 
 
 <%end%>

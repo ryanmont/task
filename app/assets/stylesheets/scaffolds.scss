@@ -109,16 +109,15 @@ label {
   color:lightgrey;
 }
 .space-index{
-  margin:15px;
+  margin:15px
 }
 
 .form-top{
   margin-left:5px;
-  display:inline-block;
 }
   .div5 {
 
-    width: 90px;
+    width: 105px;
     height: auto;
     margin: 5px;
     border: 2px solid grey; 
@@ -198,9 +197,33 @@ label {
   text-align: center
 }
 
-.input{
-  color:pink;
+
+
+/* input fields on form for placeholder and input */
+
+.myclass{
+  color:#007AFE;
+  font-weight: bold;
 }
+
+::-webkit-input-placeholder {
+   font-style: italic;
+   opacity: 0.4;
+}
+:-moz-placeholder {
+   font-style: italic;  
+   opacity: 0.4;
+}
+::-moz-placeholder {
+   font-style: italic;  
+   opacity: 0.4;
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+   opacity: 0.4;
+}
+
+
 
 @media only screen and (max-width: 420px) {
   body {

@@ -10,7 +10,6 @@
 <hr>
 <div class ="form-top">
 
-
   <div class="form-group">
 
     <%= form.label :list_type, "Category" %>
@@ -20,14 +19,6 @@
                                 include_blank: true,
                               }
     ) %>
-
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;
-
-     <button type="button" class= 'btn btn-success'> 
-   <%= form.submit  "Create/Update List" , :class =>'btn btn-success'%>
-   </button>
    
   </div>
 </div>
@@ -63,15 +54,14 @@
   &nbsp; <%= link_to_add_association "Add Items to List", form, :list_items, :class => "btn" %>&nbsp;
 </button> 
 
+<hr>
+
+     <button type="button" class= 'btn btn-success'> 
+   <%= form.submit  "Create / Update List" , :class =>'btn btn-success'%>
+   </button>
+
 <% end %>
 
 </center>
 
-
-
-
-
-</center>
-<br>
-<br>
 

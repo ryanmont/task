@@ -7,4 +7,7 @@ class List < ApplicationRecord
   belongs_to :list_type, optional: true
 
   validates_presence_of :title, :list_type, :list_items
+
+  enum status: { incomplete: 0, complete: 1 }
+
 end

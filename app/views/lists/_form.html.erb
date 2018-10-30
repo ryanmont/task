@@ -2,7 +2,7 @@
   <% if list.errors.any? %>
 
       <% list.errors.full_messages.each do |error| %>
-     <%= js add_gritter(error, :image=> :error, title: "FRIENDLY TASK", sticky: false, time: 3500) %>
+     <%= alert_generator error%>
       <% end %>
 
   <% end %>
@@ -28,12 +28,12 @@
 <center>
 
   <div class="form-group">
-    <%= form.text_area :title, id: :list_title, placeholder: "Title", cols: 45, rows: 1, class: 'myclass' %>
+    <%= form.text_area :title, id: :list_title, placeholder: "Title", cols: 40, rows: 1, class: 'myclass' %>
   </div>
 
   <div class="form-group">
  
-    <%= form.text_area :description, id: :list_description, placeholder: "Type Description", cols: 45, rows: 2, class: 'myclass' %>
+    <%= form.text_area :description, id: :list_description, placeholder: "Type Description", cols: 40, rows: 2, class: 'myclass' %>
   </div>
 
 <hr>
@@ -53,6 +53,10 @@
 <button type="button" class="btn btn-primary">
   &nbsp; <%= link_to_add_association "Add Items to List", form, :list_items, :class => "btn" %>&nbsp;
 </button> 
+<br>
+<br>
+
+
 
 <hr>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180702223330) do
+ActiveRecord::Schema.define(version: 20181030030942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180702223330) do
     t.bigint "list_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status", default: 0
     t.index ["list_id"], name: "index_list_items_on_list_id"
   end
 
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 20180702223330) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "list_type_id"
+    t.integer "status", default: 0
     t.index ["list_type_id"], name: "index_lists_on_list_type_id"
   end
 

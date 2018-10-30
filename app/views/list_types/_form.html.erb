@@ -2,16 +2,19 @@
    <% if list_type.errors.any? %>
 
       <% list_type.errors.full_messages.each do |error| %>
-     <%= js add_gritter(error, :image=> :error, title: "FRIENDLY TASK", sticky: false, time: 3500) %>
+    <%= alert_generator error%>
       <% end %>
 
   <% end %>
+<br>
 
   <div class="field">
-    <%= form.label :category, "Category New" %>
-    <%= form.text_field :category, id: :list_type_category %>
+  <h5>One or two name categories display best.</h5>
+  <br>
+
+    <%= form.text_field :category, id: :list_type_category, placeholder: "Category Name", cols: 40, rows: 1, class: 'myclass' %>
   </div>
-<br>
+
  <hr>
        <button type="button" class= 'btn btn-success'> 
    <%= form.submit  "Creat Category" , :class =>'btn btn-success'%>

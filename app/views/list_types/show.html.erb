@@ -32,25 +32,28 @@
 
 <br>
 
+
+
+
 <% @lists.each do |l| %>
 <div class="div6">
+<%= link_to  l do %> 
 <%= l.title %><br>
 <%= l.description %>
-<br>
-<br>
-<%= link_to 'View List', l %> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
-<%= link_to l, method: :delete, data: { confirm: 'Are you sure?' }  do %>
-              <%= fa_icon 'trash'%>&nbsp;  
-              <%end%> 
 
+
+<%#= link_to 'View List', l %> <!-- &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp; -->
+<%#= link_to l, method: :delete, data: { confirm: 'Are you sure?' }  do %>
+              <%#= fa_icon 'trash'%><!-- &nbsp;   -->
+              <%#end%> 
 </div>
-<br>  
 <br>
-
+</div>
+<%end%>
+<%end %>
 
 
 <%end %>
 
-<%end%>
 
 </center>

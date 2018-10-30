@@ -9,13 +9,13 @@ body {
   background-color: rgb(171, 168, 168); 
   margin: 5px;
   font-family: 'Roboto', helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   color:white;
 }
 
 p,td {
   font-family: 'Roboto', helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   color:white;
   padding:5px;
    
@@ -100,11 +100,25 @@ div {
 label {
   display: block;
 }
-
+.nav{
+  font-size: 3em !important;
+}
   .nav a{
-    color:#659BE7;
-
+    color:yellow;
+    font-size: 40px !important;
   }
+  
+.nav li{
+ 
+
+}
+
+.navbar .container .item{
+    color: #373535;
+    font-size: 40px;
+    margin: 8px 0;
+}
+
 .nav a:hover{
   color:lightgrey;
 }
@@ -114,9 +128,9 @@ label {
 
 .form-top{
   margin-left:5px;
+  font-size: 15pt;
 }
   .div5 {
-
     width: 105px;
     height: auto;
     margin: 5px;
@@ -143,7 +157,7 @@ label {
 
 .btn {
     font-family: Roboto;
-    font-size: 8pt
+    font-size: 9pt
 
 }
 
@@ -154,7 +168,7 @@ label {
     margin: 10px;
     border: 2px solid grey; 
     font-family: 'Roboto', helvetica, sans-serif;
-    font-size: 9pt;
+    font-size: 13pt;
     padding:5px;
     box-shadow: 1px 3px 8px #888888;
     border-radius: 7px;
@@ -170,7 +184,7 @@ label {
     text-align: center;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
-    font-size:14pt;
+    font-size:16pt;
  
     color: orange;
 
@@ -183,6 +197,8 @@ label {
 
 .items{
     color:#007AFE;
+    font-size: 13pt;
+
 
 }
 
@@ -204,28 +220,30 @@ label {
 .myclass{
   color:#007AFE;
   font-weight: bold;
+  font-size:14pt;
+
 }
 
 ::-webkit-input-placeholder {
    font-style: italic;
-   opacity: 0.4;
+   opacity: 0.5;
 }
 :-moz-placeholder {
    font-style: italic;  
-   opacity: 0.4;
+   opacity: 0.5;
 }
 ::-moz-placeholder {
    font-style: italic;  
-   opacity: 0.4;
+   opacity: 0.5;
 }
 :-ms-input-placeholder {  
    font-style: italic; 
-   opacity: 0.4;
+   opacity: 0.5;
 }
 
 
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 700px) {
   body {
       background-color: #2A2A2C;
   }

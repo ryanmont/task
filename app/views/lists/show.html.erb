@@ -6,14 +6,15 @@
 <div class="form-top">
 <p>
   <strong>
-   Category:&nbsp;
+   Category:&nbsp;&nbsp;
   <%= @list&.list_type&.category %>
   </strong>
+
 </p>
 <hr>
 
 
-<div style="color:orange">
+<div style="color:orange;font-size: 13pt;">
   Title:  <%= @list.title %>
   <br>
 
@@ -25,17 +26,39 @@
 
   <p> Items on List:  <%= @list.list_items.count %> </p>
 
+
+
+
+
 <div class ="items">
 
 <% @list.list_items.each do |i| %>
-   
+   <%#= check_box_tag "list_id[]", @list.id%>
+   - <%= i.item%>
 
-   - <%= i.item %><br><br>
+   <%#= link_to i.status, list_items_toggle_status_path(@list_item) %>
+
+<br>
+
+   <br><br>
+
     <% end %>
+
+
+   <%#=submit_tag "Mark Complete" %>
 </div>
 
+<%= params[:action]%>
 <br>
 <br>
+</div>
+
+
+
+
+
+
+
 
 <center>
 
@@ -57,11 +80,16 @@
     <%end%>
 <hr>
 
+<%#= link_to , method: :delete, data: { confirm: 'Are you sure?' }  do %>
+              <%#= fa_icon 'trash'%><!-- &nbsp;   -->
+              <%#end%> 
+
+  <%= link_to list_path(@list), method: :delete, data: { confirm: "Whoah- slow your roll! You sure?" } do %>
+     <%= fa_icon 'trash'%>&nbsp; <%="Delete '#{@list.title}' List"%>
+    <%end%>
 </center>
 
 
 
 
 <%end%>
-
-</div>

@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_list, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   # GET /lists
   # GET /lists.json
@@ -10,6 +10,7 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+  
   end
 
   # GET /lists/new
@@ -61,6 +62,23 @@ class ListsController < ApplicationController
     end
   end
 
+
+
+  def toggle_status
+     if 
+     @list.incomplete?
+     @list.complete!
+
+   elsif 
+    @list.complete?
+    @list.incomplete!
+  end
+
+    redirect_to @list
+  end
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_list
@@ -76,4 +94,6 @@ class ListsController < ApplicationController
                                     list_items_attributes: [:item, :id, :_destroy]
                                    )
     end
+
+
 end

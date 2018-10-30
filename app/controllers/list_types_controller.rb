@@ -12,6 +12,7 @@ class ListTypesController < ApplicationController
   def show
     @list_type= ListType.find(params[:id])
     @lists = @list_type.lists
+    @list=List.all
   end
 
   # GET /list_types/new

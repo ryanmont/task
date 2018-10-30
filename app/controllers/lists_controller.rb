@@ -29,7 +29,7 @@ class ListsController < ApplicationController
 
     respond_to do |format|
       if @list.save
-        format.html { redirect_to @list, notice: 'Your List was successfully created.' }
+        format.html { redirect_to @list, notice: 'Nice Work- List Created.' }
         format.json { render :show, status: :created, location: @list }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class ListsController < ApplicationController
   def update
     respond_to do |format|
       if @list.update(list_params)
-        format.html { redirect_to @list, notice: 'Your List was successfully updated.' }
+        format.html { redirect_to @list, notice: 'Changes and Additions Successful.' }
         format.json { render :show, status: :ok, location: @list }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class ListsController < ApplicationController
   def destroy
     @list.destroy
     respond_to do |format|
-      format.html { redirect_to list_types_url, notice: 'List was successfully deleted.' }
+      format.html { redirect_to list_types_url, notice: "Check ya later list." }
       format.json { head :no_content }
     end
   end

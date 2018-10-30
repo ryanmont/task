@@ -24,9 +24,7 @@
 
 <hr>
 
-  <p> Items on List:  <%= @list.list_items.count %> </p>
-
-
+  <p style= "margin-bottom: 18px"> Items on List:  <%= @list.list_items.count %> </p>
 
 
 
@@ -40,7 +38,7 @@
 
 <br>
 
-   <br><br>
+   <br>
 
     <% end %>
 
@@ -48,9 +46,7 @@
    <%#=submit_tag "Mark Complete" %>
 </div>
 
-<%= params[:action]%>
-<br>
-<br>
+
 </div>
 
 
@@ -74,6 +70,8 @@
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+
 
 <%= link_to  edit_list_path(@list) do %>
   <%= fa_icon 'fab edit fa-7x'%>&nbsp; Click to Edit items

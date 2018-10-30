@@ -4,7 +4,9 @@ class ListTypesController < ApplicationController
   # GET /list_types
   # GET /list_types.json
   def index
-    @list_types = ListType.all
+    @list_types = current_user.list_types
+    # @list_types = ListType.all
+  
   end
 
   # GET /list_types/1
@@ -12,12 +14,12 @@ class ListTypesController < ApplicationController
   def show
     @list_type= ListType.find(params[:id])
     @lists = @list_type.lists
-    @list=List.all
+    # @list = current_user.list
   end
 
   # GET /list_types/new
   def new
-    @list_type = ListType.new
+    @list_type = current_user.list_types.new
   end
 
   # GET /list_types/1/edit
@@ -27,7 +29,7 @@ class ListTypesController < ApplicationController
   # POST /list_types
   # POST /list_types.json
   def create
-    @list_type = ListType.new(list_type_params)
+    @list_type = current_user.list_types.build(list_type_params)
 
     respond_to do |format|
       if @list_type.save
@@ -67,11 +69,12 @@ class ListTypesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_list_type
+      # @list_type = current_user.list_types.find(params[:id])
       @list_type = ListType.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_type_params
-      params.require(:list_type).permit(:category)
+      params.require(:list_type).permit(:category,:user_id)
     end
 end

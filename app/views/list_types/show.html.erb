@@ -12,27 +12,27 @@
 
 <hr>
 
+<button type="button" class= 'btn btn-success'> 
 <%= link_to list_types_path do %>
  <%= fa_icon 'caret-left'%>&nbsp; Back to All lists
  &nbsp;
  <%= fa_icon 'list'%>
-
 <%end%>
+</button>
 
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
 
-<%= link_to  new_list_path do %> 
- 
+<button type="button" class= 'btn btn-success'> 
+<%= link_to  new_list_path do %>  
 &nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;Create A New List
 <%end%> 
+</button>
 
 <hr>
 
 <br>
-
-
 
 
 <% @lists.each do |l| %>

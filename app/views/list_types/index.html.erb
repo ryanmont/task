@@ -7,19 +7,22 @@
 
 <hr>
 
+<button type="button" class= 'btn btn-success'> 
 <%= link_to  new_list_type_path do %> 
-
 &nbsp;&nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;Create a New Category
 <%end%> 
+</button>
 
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
 
+<button type="button" class= 'btn btn-success'> 
 <%= link_to  new_list_path do %> 
- 
 &nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;Create A New List
 <%end%> 
+</button>
+
 </center>
 <hr>
 <br>
@@ -57,7 +60,8 @@
 
 <br>
 <br>
-
+<%else %>
+<h4> Login to access your lists </h4>
 
 
 <%end%>

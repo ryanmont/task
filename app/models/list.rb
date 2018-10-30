@@ -5,6 +5,7 @@ class List < ApplicationRecord
                                 reject_if: lambda{ |attrs| attrs['item'].blank? } 
 
   belongs_to :list_type, optional: true
+  belongs_to :user
 
   validates_presence_of :title, :list_type, :list_items
 

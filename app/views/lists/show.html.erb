@@ -59,32 +59,45 @@
 <center>
 
 <hr>
+
+<%= link_to  edit_list_path(@list) do %>
+  <%= fa_icon 'fab edit fa-7x'%>&nbsp; Add / Edit items
+    <%end%>
+
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+
+
 <%= link_to list_types_path do %>
  <%= fa_icon 'caret-left'%>&nbsp; Back to All lists
  &nbsp;
  <%= fa_icon 'list'%>
 <%end%>
 
-
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;
-
-
-<%= link_to  edit_list_path(@list) do %>
-  <%= fa_icon 'fab edit fa-7x'%>&nbsp; Click to Edit items
-    <%end%>
 <hr>
 
 <%#= link_to , method: :delete, data: { confirm: 'Are you sure?' }  do %>
               <%#= fa_icon 'trash'%><!-- &nbsp;   -->
               <%#end%> 
+<%= link_to  new_list_path do %> 
+ 
+&nbsp;&nbsp;<%= fa_icon 'plus-square'%>&nbsp;Create A New List
+<%end%> 
+  
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 
   <%= link_to list_path(@list), method: :delete, data: { confirm: "Whoah- slow your roll! You sure?" } do %>
      <%= fa_icon 'trash'%>&nbsp; <%="Delete '#{@list.title}' List"%>
     <%end%>
+
+
+
+
 </center>
 
 
